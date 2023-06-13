@@ -14,6 +14,7 @@ const getDatafromLS=()=>{
       }
 }
 var avatar = ''
+
 export const App = () => {
 
   /*
@@ -54,6 +55,7 @@ export const App = () => {
     		})
 			.then(function(users) {
         avatar = users.avatar_url
+        
 			
     /*
             creating an object
@@ -80,6 +82,7 @@ export const App = () => {
    	
     });
   }
+
 
   /*
             delete team from Local storage 
@@ -152,7 +155,7 @@ export const App = () => {
               {teams.length>0&&
               <>
                   <div className='table-responsive'>
-                    <table className='table'>
+                    <table className='table' id='tabla'>
                       <thead>
                         <tr>
                           <th>Student</th>

@@ -6,14 +6,17 @@ export const Imprimir = ({teams,deleteTeam}) => {
     
     return teams.map(team=>(
         
+        
         <tr key={team.usergh}>
             <td><img src = {team.avatar} alt='imagen Avatar'/></td>
             <td>
                  <a  href= {'https://pfabreuave.github.io/api-github-javascript/?user=' + team.usergh} target='_blank' rel='noreferrer'>{team.usergh}</a>                    
             </td>
-            <td>{team.email}</td>
             <td>
-                 <a  href='https://www.linkedin.com/in/pedro-abreu-7a958a5b/' target='_blank' rel='noreferrer'>{team.linkedin}</a>                    
+                {team.email}
+            </td>
+            <td>
+                <a  href={'https://www.linkedin.com/in/' + team.linkedin} target='_blank' rel='noreferrer'>{team.linkedin}</a>                   
             </td>
             <td>
                  <a  href={'https://pfabreuave.github.io/API-Codewars-JS/?user=' + team.usercw} target='_blank' rel='noreferrer'>{team.usercw}</a>                    
@@ -23,9 +26,7 @@ export const Imprimir = ({teams,deleteTeam}) => {
             </td> 
         </tr> 
         
-        
 
-
-    
+   
 ))
 }
